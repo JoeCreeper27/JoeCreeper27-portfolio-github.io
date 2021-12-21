@@ -1,2 +1,2 @@
-# JoeCreeper27-portfolio-github.io
+# JoeCreeper27-portfolio
 J-Portfolio
