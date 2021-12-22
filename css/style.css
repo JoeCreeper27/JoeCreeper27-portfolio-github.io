@@ -8,6 +8,8 @@
   font-family: "Caveat", cursive;
   font-family: "Noto Sans TC", sans-serif;
   font-family: "Quicksand", sans-serif;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 h1 {
@@ -104,24 +106,19 @@ nav ul {
   margin: 10px;
 }
 
-nav ul li {
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
-}
-
 nav ul li .active {
   color: teal;
   font-size: 1.1rem;
 }
 
-nav ul li :hover {
-  color: teal;
-  text-shadow: darkslategray 0rem 0rem 0.2rem;
-}
-
 nav ul li a {
   text-decoration: none;
   font-size: 1rem;
+}
+
+nav ul li:hover {
+  color: teal;
+  text-shadow: darkslategray 0rem 0rem 0.2rem;
 }
 
 main {
@@ -144,6 +141,14 @@ main {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  -webkit-animation: opacityin 1.5s ease-in;
+          animation: opacityin 1.5s ease-in;
+}
+
+main h1 {
+  margin: 2rem;
+  font-size: 2rem;
+  color: teal;
 }
 
 main section.backImage {
@@ -208,12 +213,17 @@ main section.second {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-main section.second h1 {
-  margin: 2rem;
-  font-size: 2rem;
-  color: teal;
+main section.second .project {
+  height: 300px;
+  width: 300px;
+  border-radius: 5%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 1rem;
 }
 
 main section.second section.cards {
@@ -223,6 +233,63 @@ main section.second section.cards {
   width: 40%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  border-radius: 10%;
+}
+
+main section.second section.cards div.card-p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 150px;
+          flex: 1 1 150px;
+}
+
+main section.second section.cards div.card-p a {
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  display: contents;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section.second section.cards div.card-p a div.img-con {
+  overflow: hidden;
+  width: 150px;
+  height: 200px;
+}
+
+main section.second section.cards div.card-p a div.img-con img {
+  width: 150px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main section.second section.cards div.card-p a div.img-con img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+main section.second section.cards div.card-p a h4 {
+  margin: 1rem;
+}
+
+main section.second section.cards div.card-p a h4:hover {
+  color: teal;
+  text-shadow: darkslategray 0rem 0rem 0.2rem;
 }
 
 main section.second section.cards div.card {
@@ -258,8 +325,6 @@ main section.second section.cards div.card div.img-con img {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
 }
 
 main section.second section.cards div.card div.img-con img:hover {
@@ -278,6 +343,24 @@ main section.second section.cards div.card a {
   background-color: teal;
   color: white;
   border-radius: 10%;
+}
+
+main section.second section.cards table {
+  position: relative;
+  width: 500px;
+}
+
+main section.second section.cards table td.tit {
+  text-align: right;
+  width: 200px;
+  padding: 1rem 0.75rem;
+  font-weight: 400;
+}
+
+main section.second section.cards table td {
+  font-weight: 700;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
 }
 
 footer {
@@ -374,6 +457,24 @@ footer h5 {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: teal;
+}
+
+@-webkit-keyframes opacityin {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityin {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 800px) {

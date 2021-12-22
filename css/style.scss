@@ -7,6 +7,7 @@
   font-family: "Caveat", cursive;
   font-family: "Noto Sans TC", sans-serif;
   font-family: "Quicksand", sans-serif;
+  transition: all 0.5s ease-in;
 }
 
 h1 {
@@ -68,22 +69,21 @@ nav {
     justify-content: space-evenly;
     align-items: center;
     margin: 10px;
-    li {
-      transition: all 0.5s ease-in;
 
+    li {
       .active {
         color: teal;
         font-size: 1.1rem;
       }
-      :hover {
-        color: teal;
 
-        text-shadow: darkslategray 0rem 0rem 0.2rem;
-      }
       a {
         text-decoration: none;
         font-size: 1rem;
       }
+    }
+    li:hover {
+      color: teal;
+      text-shadow: darkslategray 0rem 0rem 0.2rem;
     }
   }
 }
@@ -100,6 +100,12 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  animation: opacityin 1.5s ease-in;
+  h1 {
+    margin: 2rem;
+    font-size: 2rem;
+    color: teal;
+  }
 
   section.backImage {
     min-height: 90vh;
@@ -156,17 +162,60 @@ main {
     width: 90%;
     min-height: 100vh;
     justify-content: space-evenly;
-    h1 {
-      margin: 2rem;
-      font-size: 2rem;
-      color: teal;
+    flex-wrap: wrap;
+    .project {
+      height: 300px;
+      width: 300px;
+      border-radius: 5%;
+      object-fit: cover;
+      margin: 1rem;
     }
-
     section.cards {
       display: flex;
       width: 40%;
       //   min-height: 60vh;
       flex-wrap: wrap;
+
+      border-radius: 10%;
+
+      div.card-p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 1rem;
+        flex: 1 1 150px;
+        a {
+          text-decoration: none;
+          padding: 0.5rem 1.5rem;
+          display: contents;
+          align-items: center;
+          div.img-con {
+            overflow: hidden;
+            width: 150px;
+            height: 200px;
+
+            img {
+              width: 150px;
+              height: 200px;
+
+              object-fit: cover;
+            }
+            img:hover {
+              transform: scale(1.2);
+            }
+          }
+          h4 {
+            // color: teal;
+            margin: 1rem;
+          }
+          h4:hover {
+            color: teal;
+
+            text-shadow: darkslategray 0rem 0rem 0.2rem;
+          }
+        }
+      }
 
       div.card {
         display: flex;
@@ -175,6 +224,7 @@ main {
         justify-content: space-evenly;
         padding: 1rem;
         flex: 1 1 150px;
+
         div.img-con {
           overflow: hidden;
           width: 120px;
@@ -186,7 +236,6 @@ main {
             height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            transition: all 0.3s ease-out;
           }
           img:hover {
             transform: scale(1.2);
@@ -202,6 +251,22 @@ main {
           background-color: teal;
           color: white;
           border-radius: 10%;
+        }
+      }
+      table {
+        position: relative;
+        width: 500px;
+        td.tit {
+          text-align: right;
+          width: 200px;
+          padding: 1rem 0.75rem;
+          font-weight: 400;
+        }
+
+        td {
+          font-weight: 700;
+          text-align: left;
+          padding: 0.5rem 0.75rem;
         }
       }
     }
@@ -279,7 +344,14 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
   background: teal;
 }
-
+@keyframes opacityin {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 800px) {
   main {
     section.second {
