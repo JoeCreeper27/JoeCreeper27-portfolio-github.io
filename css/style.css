@@ -143,6 +143,10 @@ main {
   text-align: center;
   -webkit-animation: opacityin 1.5s ease-in;
           animation: opacityin 1.5s ease-in;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
 }
 
 main h1 {
@@ -284,7 +288,68 @@ main section.second section.info a {
   border-radius: 10%;
 }
 
-main section.second section.cards {
+main section.second section.left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 200px;
+          flex: 2 1 200px;
+}
+
+main section.second section.left div.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 150px;
+          flex: 1 1 150px;
+}
+
+main section.second section.left div.card h4 {
+  color: teal;
+  margin: 1rem;
+}
+
+main section.second section.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  justify-items: center;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 1 300px;
+          flex: 3 1 300px;
+}
+
+main section.second section.right table td.tit {
+  text-align: right;
+  width: 30vw;
+  padding: 1rem 0.75rem;
+  font-weight: 400;
+}
+
+main section.second section.right table td {
+  font-weight: 700;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+}
+
+main section.second section.right section.cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,7 +359,7 @@ main section.second section.cards {
   border-radius: 10%;
 }
 
-main section.second section.cards div.card-p {
+main section.second section.right section.cards div.card-p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,7 +379,7 @@ main section.second section.cards div.card-p {
           flex: 1 1 150px;
 }
 
-main section.second section.cards div.card-p a {
+main section.second section.right section.cards div.card-p a {
   text-decoration: none;
   padding: 0.5rem 1.5rem;
   display: contents;
@@ -323,34 +388,34 @@ main section.second section.cards div.card-p a {
           align-items: center;
 }
 
-main section.second section.cards div.card-p a div.img-con {
+main section.second section.right section.cards div.card-p a div.img-con {
   overflow: hidden;
   width: 150px;
   height: 200px;
 }
 
-main section.second section.cards div.card-p a div.img-con img {
+main section.second section.right section.cards div.card-p a div.img-con img {
   width: 150px;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-main section.second section.cards div.card-p a div.img-con img:hover {
+main section.second section.right section.cards div.card-p a div.img-con img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-main section.second section.cards div.card-p a h4 {
+main section.second section.right section.cards div.card-p a h4 {
   margin: 1rem;
 }
 
-main section.second section.cards div.card-p a h4:hover {
+main section.second section.right section.cards div.card-p a h4:hover {
   color: teal;
   text-shadow: darkslategray 0rem 0rem 0.2rem;
 }
 
-main section.second section.cards div.card {
+main section.second section.right section.cards div.card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -370,14 +435,14 @@ main section.second section.cards div.card {
           flex: 1 1 150px;
 }
 
-main section.second section.cards div.card div.img-con {
+main section.second section.right section.cards div.card div.img-con {
   overflow: hidden;
   width: 120px;
   height: 120px;
   border-radius: 50%;
 }
 
-main section.second section.cards div.card div.img-con img {
+main section.second section.right section.cards div.card div.img-con img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -385,17 +450,17 @@ main section.second section.cards div.card div.img-con img {
      object-fit: cover;
 }
 
-main section.second section.cards div.card div.img-con img:hover {
+main section.second section.right section.cards div.card div.img-con img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-main section.second section.cards div.card h4 {
+main section.second section.right section.cards div.card h4 {
   color: teal;
   margin: 1rem;
 }
 
-main section.second section.cards div.card a {
+main section.second section.right section.cards div.card a {
   text-decoration: none;
   padding: 0.5rem 1.5rem;
   background-color: rgba(0, 128, 128, 0.7);
@@ -403,25 +468,25 @@ main section.second section.cards div.card a {
   border-radius: 10%;
 }
 
-main section.second section.cards table {
+main section.second section.right section.cards table {
   position: relative;
   width: 500px;
 }
 
-main section.second section.cards table td.tit {
+main section.second section.right section.cards table td.tit {
   text-align: right;
-  width: 200px;
+  width: 20vw;
   padding: 1rem 0.75rem;
   font-weight: 400;
 }
 
-main section.second section.cards table td {
+main section.second section.right section.cards table td {
   font-weight: 700;
   text-align: left;
   padding: 0.5rem 0.75rem;
 }
 
-footer {
+main footer {
   min-height: 30vh;
   width: 100%;
   background-color: #f9fafa;
@@ -438,7 +503,7 @@ footer {
   text-align: center;
 }
 
-footer section.inf {
+main footer section.inf {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -449,7 +514,7 @@ footer section.inf {
       justify-content: space-around;
 }
 
-footer section.inf div.card-f {
+main footer section.inf div.card-f {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -467,7 +532,7 @@ footer section.inf div.card-f {
           flex: 1 1 150px;
 }
 
-footer div.logo {
+main footer div.logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,44 +541,40 @@ footer div.logo {
           align-items: center;
 }
 
-footer div.logo img {
+main footer div.logo img {
   margin-right: 1rem;
   height: 50px;
   width: 50px;
 }
 
-footer section.link a {
+main footer section.link a {
   margin: 1rem 5px;
 }
 
-footer section.link a img {
+main footer section.link a img {
   width: 30px;
   height: 30px;
 }
 
-footer h5 {
+main footer h5 {
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
   color: rgba(47, 79, 79, 0.7);
 }
 
-/* width */
-::-webkit-scrollbar {
+main ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
+main ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
+main ::-webkit-scrollbar-thumb {
   background: darkslategrey;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+main ::-webkit-scrollbar-thumb:hover {
   background: teal;
 }
 
@@ -547,14 +608,90 @@ footer h5 {
         -ms-flex-align: center;
             align-items: center;
   }
-  main section.second section.cards {
-    width: 90%;
+  main section.second section.left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90vw;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-  footer section.inf {
+  main section.second section.left div.card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 1rem;
   }
+  main section.second section.right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90vw;
+    justify-items: center;
+  }
+  main section.second section.right table td.tit {
+    text-align: right;
+    width: 30vw;
+    padding: 1rem 0.75rem;
+    font-weight: 400;
+  }
+  main section.second section.right table td {
+    font-weight: 700;
+    text-align: left;
+    width: 60vw;
+    padding: 0.5rem 0.75rem;
+  }
+  main section.second section.cards {
+    width: 90%;
+  }
+  main section.second .project {
+    height: 48vw;
+    width: 48vw;
+    border-radius: 5%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 1rem;
+  }
+  main section.second .project-w {
+    height: 48vw;
+    width: 80vw;
+    border-radius: 5%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 1rem;
+  }
+  main section.second .project-h {
+    height: 80vw;
+    width: 48vw;
+    border-radius: 5%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 1rem;
+  }
+  main section.second .project-l {
+    height: 80vw;
+    width: 80vw;
+    border-radius: 5%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 1rem;
+  }
+}
+
+main footer section.inf {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=style.css.map */
